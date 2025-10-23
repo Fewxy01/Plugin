@@ -3,7 +3,7 @@ const {getGreeting} = require('./mylogic');
 
 function activate(context) {
   let disposable = vscode.commands.registerCommand('labnode.hello', () => {
-    const message = getGreeting('Мария');
+    const message = getGreeting('Mary');
     vscode.window.showInformationMessage(message);
   });
 
