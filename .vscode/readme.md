@@ -20,7 +20,7 @@
 - **package.json** - текстовый конфигурационный файл, в котором описывается имя проекта на Node.js, версия, описание, зависимости, точка входа и другие параметры (описывает, как собрать и запустить программу)
 
 - содержание файла:
-\```json
+```json
 {
   "name": "plugin",
   "displayName": "Lab Node Plugin",
@@ -46,25 +46,25 @@
   },
   "license": "ISC"
 }
-\```
+```
 
 ### Mylogic.js
 - **mylogic.js** - файл с логикой проекта, который объявляет функцию getGreeting с текстовой строкой и содержанием текущего времени
 
 - содержание файла:
-\```js
+```js
 function getGreeting(name = 'user') {
   const time = new Date().toLocaleTimeString();
   return `Hello, ${name}! It's ${time} now`;
 }
 module.exports = {getGreeting};
-\```
+```
 
 ### Extension.js
 - **extension.js** - основной файл проекта, который подключает все модули и активирует работу плагина
 
 - содержание файла:
-\```js
+```js
 const vscode = require('vscode');
 const {getGreeting} = require('./mylogic');
 
@@ -83,13 +83,13 @@ module.exports = {
   activate,
   deactivate
 };
-\```
+```
 
 ### Launch.json
 - **launch.json** - файл конфигурации запуска и тестировки плагина. После нажатия кнопки F5 плагин запускается как установленное расширение
 
 - содержание файла:
-\```json
+```json
 {
   "version": "0.2.0",
   "configurations": [
@@ -104,4 +104,4 @@ module.exports = {
     }
   ]
 }
-\```
+```
